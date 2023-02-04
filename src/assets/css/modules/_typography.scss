@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=PT+Sans+Narrow:wght@400;700&display=swap");
+@import "modules/variables";
+
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+* {
+  color: $color-white;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}

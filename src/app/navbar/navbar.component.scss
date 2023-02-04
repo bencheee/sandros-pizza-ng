@@ -1,0 +1,114 @@
+@import "modules/variables";
+@import "modules/mixins";
+
+.navbar {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 8px 16px;
+  justify-content: space-between;
+
+  .navbar-brand {
+    font-family: "Cabin Sketch", cursive;
+    font-size: 40px;
+    line-height: 1;
+    color: $color-orange;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    i {
+      font-size: 24px;
+      color: $color-orange;
+      width: 21px;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .nav-collapse {
+    @include media-breakpoint-down(md) {
+      display: block;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      background-color: orange;
+      box-shadow: 2px 2px 4px $color-gray-light;
+      transition: ease-in 0.3s;
+
+      &.hidden {
+        opacity: 0;
+        width: 0;
+      }
+
+      &.visible {
+        opacity: 1;
+        width: 95%;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      display: flex;
+      margin-left: 20px;
+      transition: ease-in 0.3s;
+      @include media-breakpoint-down(md) {
+        border-bottom: 1px solid $color-orange-dark;
+        padding: 0;
+        margin: 0;
+        &:hover {
+          background-color: $color-orange-dark;
+        }
+      }
+
+      &.m-hide {
+        display: none;
+        @include media-breakpoint-up(md) {
+          display: flex;
+        }
+      }
+      &.d-hide {
+        display: flex;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+      .nav-link {
+        color: $color-white;
+        transition: all 0.3s;
+
+        @include media-breakpoint-down(md) {
+          white-space: nowrap;
+          overflow: hidden;
+          padding: 16px 0 16px 20px;
+          width: 100%;
+        }
+
+        i {
+          font-size: 14px;
+          padding-right: 4px;
+          transition: all 0.3s;
+        }
+        &:hover {
+          color: $color-orange;
+          @include media-breakpoint-down(md) {
+            color: $color-white;
+          }
+
+          i {
+            color: $color-orange;
+          }
+        }
+      }
+    }
+  }
+}
