@@ -29,6 +29,10 @@
       font-size: 24px;
       color: $color-orange;
       width: 21px;
+      transition: all 0.3s;
+      &:hover {
+        color: $color-white;
+      }
     }
     &:focus {
       box-shadow: none;
@@ -41,7 +45,7 @@
       top: 56px;
       left: 0;
       background-color: orange;
-      box-shadow: 2px 2px 4px $color-gray-light;
+      box-shadow: 2px 2px 4px rgb(255 255 255 / 20%);
       transition: ease-in 0.3s;
 
       &.hidden {
