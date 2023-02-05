@@ -1,0 +1,94 @@
+@import "modules/variables";
+@import "modules/mixins";
+
+footer {
+  background-color: $color-black;
+  padding: 50px 15vw;
+  padding-bottom: 25px;
+  font-size: 16px;
+  hr {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    @include media-breakpoint-down(md) {
+      margin: 50px 0;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .left {
+      margin-right: 50px;
+      @include media-breakpoint-down(md) {
+        margin: 0;
+      }
+      .logo {
+        font-family: "Cabin Sketch", cursive;
+        font-size: 60;
+        line-height: 1;
+        color: $color-orange;
+        padding: 0;
+        margin: 0;
+      }
+      div {
+        margin-top: 24px;
+      }
+      a {
+        transition: all 0.3s;
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+    .right {
+      margin-left: 50px;
+      @include media-breakpoint-down(md) {
+        margin-top: 60px;
+        margin-left: 0;
+      }
+      strong {
+        font-size: 24px;
+      }
+      div {
+        margin-top: 24px;
+        &:first-of-type {
+          margin: 0;
+        }
+      }
+      .closed {
+        display: inline-block;
+        margin-left: 16px;
+        padding: 0 12px;
+        background-color: $color-orange;
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+    .copyright {
+      margin-bottom: 25px;
+    }
+    a {
+      margin-left: 8px;
+    }
+    i {
+      background-color: $color-gray-dark;
+      padding: 12px;
+      width: 42px;
+      text-align: center;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $color-orange;
+      }
+    }
+  }
+}
